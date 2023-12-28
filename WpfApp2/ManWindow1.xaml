@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp2.ManWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+         Title="Выберите пользователя" Height="450" Width="800">
+    <Grid Background="Green">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Выбор пользователя" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Background="White" BorderBrush="DarkGray" BorderThickness="1" CornerRadius="5" Margin="10">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Width="300" Height="150">
+                        <StackPanel>
+                            <TextBlock Text="Бухгалтер" FontSize="25" Margin="0 10" />
+
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border Background="White" BorderBrush="DarkGray" BorderThickness="1" CornerRadius="5" Margin="10" Grid.Column="1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Width="200" Height="150" Click="Button_Click">
+                        <StackPanel>
+                            <TextBlock Text="Менеджер" FontSize="25" Margin="0 10" />
+
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
